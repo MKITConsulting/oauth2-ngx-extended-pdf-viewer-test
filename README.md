@@ -1,3 +1,33 @@
+## Steps for testing with ngx-extended-pdf-viewer
+
+### Start Keycloak
+
+    docker-compose -f src/main/docker/keycloak.yml up
+
+### Compile jHipster frontend & backend
+
+    npm install
+    
+### Start the jHipster backend & frontend
+
+    ./mvnw
+    npm start
+
+### Test the application
+
+1. Open Browser at [http://localhost:9000](http://localhost:9000)
+2. Login to Keycloak with `admin` / `admin`
+3. Click topbar menu entry "*NgxPdfTest*"
+4. See 401 error code for the REST call: [http://localhost:8080/api/documents/testpdf](http://localhost:8080/api/documents/testpdf)
+5. Open Browser at [http://localhost:8080/api/documents/testpdf](http://localhost:8080/api/documents/testpdf) to verify resource load (will work as cookies are set in browser after login to keycloak)
+
+For detailed informations on jHipster read the following section.
+
+                    |
+                    |
+                    v
+
+
 # jhipsterOauth2SampleApplication
 
 This application was generated using JHipster 6.9.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.9.1](https://www.jhipster.tech/documentation-archive/v6.9.1).
