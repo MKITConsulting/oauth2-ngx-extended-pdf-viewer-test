@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "0a655def-1e74-48a0-9ea3-284153c4d595",
+		"name": "OAuthNgxExtendedPdfTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/documents/testpdf",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJudTU3alFKS2k1V1hvbHM4Q0tVdjl2T1N3cmlvd3RXWlV2bi0xZFJZMlJJIn0.eyJleHAiOjE1OTI5NDA4OTQsImlhdCI6MTU5Mjk0MDU5NCwiYXV0aF90aW1lIjoxNTkyOTQwNTk0LCJqdGkiOiI1MWJlYTZmOS03ODY4LTQzYjctODFhYi04OTYzZjkwNzUyYTAiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjkwODAvYXV0aC9yZWFsbXMvamhpcHN0ZXIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNGM5NzM4OTYtNTc2MS00MWZjLTgyMTctMDdjNWQxM2EwMDRiIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoid2ViX2FwcCIsInNlc3Npb25fc3RhdGUiOiI4MTI0NDk3OS02MWIyLTRjMmYtODFhZi01N2U3NzRiOGZjYWIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIlJPTEVfVVNFUiIsIm9mZmxpbmVfYWNjZXNzIiwiUk9MRV9BRE1JTiIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJqaGlwc3RlciBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInJvbGVzIjpbIlJPTEVfVVNFUiIsIm9mZmxpbmVfYWNjZXNzIiwiUk9MRV9BRE1JTiIsInVtYV9hdXRob3JpemF0aW9uIl0sIm5hbWUiOiJBZG1pbiBBZG1pbmlzdHJhdG9yIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4iLCJnaXZlbl9uYW1lIjoiQWRtaW4iLCJmYW1pbHlfbmFtZSI6IkFkbWluaXN0cmF0b3IiLCJlbWFpbCI6ImFkbWluQGxvY2FsaG9zdCJ9.G0TprZRi8xS-7oztmFxObPJwNzzchtgbrKUIEw-UjtAq4g7fB6Pm3CPLif5TCzHaq1eXNyaJb6TByLkOfWQuK9kamM4vzjbaORYiTRVeJzJq6DT-9wDY1P3-sAuoE5DQT5PmtSHTPDnVjFNe39ycDSwj8l1OnpsYoTHMX7KMMv7ngrcHBZQtz1UYtbrSluwkBbr5zMsJ_9M4jlB5dBYu7X3958IOVVSMOnLXz9bWf_rbRF_AcbdxizDv5ExaCIzGw-z0zuePc1n2QO8afxOECRLq25OG2eCBl55woCqknzLWo8vg9yfL2gHrP3_cfipqpgUSZxXjVQHB7r14Ry6IpQ",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/documents/testpdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"documents",
+						"testpdf"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
