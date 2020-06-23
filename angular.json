@@ -26,7 +26,8 @@
         }
       },
       "prefix": "jhi",
-      "architect": {}
+      "architect": {
+      }
     }
   },
   "defaultProject": "jhipster-oauth-2-sample-application",

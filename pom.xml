@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.jhipster.sample</groupId>
-    <artifactId>jhipster-oauth-2-sample-application</artifactId>
+    <artifactId>oauth2-ngx-extended-pdf-viewer-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Jhipster Oauth 2 Sample Application</name>
