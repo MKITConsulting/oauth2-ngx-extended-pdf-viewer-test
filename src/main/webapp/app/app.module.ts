@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import './vendor';
@@ -15,6 +15,7 @@ import {PageRibbonComponent} from './layouts/profiles/page-ribbon.component';
 import {ActiveMenuDirective} from './layouts/navbar/active-menu.directive';
 import {ErrorComponent} from './layouts/error/error.component';
 import {NgxExtendedPdfModule} from "app/ngx-extended-pdf/ngx-extended-pdf.module";
+import {KeycloakService} from "app/oauth2/KeycloakService";
 
 @NgModule({
     imports: [
@@ -27,8 +28,19 @@ import {NgxExtendedPdfModule} from "app/ngx-extended-pdf/ngx-extended-pdf.module
         JhipsterOauth2SampleApplicationEntityModule,
         JhipsterOauth2SampleApplicationAppRoutingModule,
     ],
+    providers: [KeycloakService,
+        {
+            provide: APP_INITIALIZER,
+            useFactory: kcFactory,
+            deps: [KeycloakService],
+            multi: true
+        }],
     declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
     bootstrap: [MainComponent],
 })
 export class JhipsterOauth2SampleApplicationAppModule {
+}
+
+export function kcFactory(keycloakService: KeycloakService): () => void {
+    return () => keycloakService.init();
 }
