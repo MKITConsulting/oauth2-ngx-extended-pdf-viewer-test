@@ -17,6 +17,11 @@ import {ErrorComponent} from './layouts/error/error.component';
 import {NgxExtendedPdfModule} from "app/ngx-extended-pdf/ngx-extended-pdf.module";
 import {KeycloakService} from "app/oauth2/KeycloakService";
 
+
+export function kcFactory(keycloakService: KeycloakService): () => void {
+    return () => keycloakService.init();
+}
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -39,8 +44,4 @@ import {KeycloakService} from "app/oauth2/KeycloakService";
     bootstrap: [MainComponent],
 })
 export class JhipsterOauth2SampleApplicationAppModule {
-}
-
-export function kcFactory(keycloakService: KeycloakService): () => void {
-    return () => keycloakService.init();
 }
